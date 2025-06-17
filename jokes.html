@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joke Generator</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; background-color: #d6a0ff; text-align: center; }
+    #joke-box { background: rgb(136, 255, 112); padding: 1.5rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: inline-block; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+<a href="index_Autumn.html">Home</a> <br><br>
+  <div id="joke-box">
+    <h2>Need a Laugh?</h2>
+    <p id="joke">Click the button for a joke!</p>
+    <button onclick="generateJoke()">Tell me a joke</button>
+  </div>
+  <script>
+    const jokes = [
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "Why did the bicycle fall over? It was two-tired.",
+      "I told my computer I needed a break, and it said: 'No problem, I’ll go to sleep.'",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet."
+    ];
+
+    function generateJoke() {
+      const index = Math.floor(Math.random() * jokes.length);
+      document.getElementById("joke").textContent = jokes[index];
+    }
+  </script>
+ <br><br>
+ <br><br>
+
+ <img src="Images/monkeymeme.webp" height="400" alt="monkey"> 
+
+</body>
+</html>
